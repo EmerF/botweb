@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head></h:head>
+<h:body>
+	<h:form>
+		<p:panel header="Robo Para Trade Em Exchange">
+			<p:messages id="mensagem" />
+			<h:panelGrid columns="4">
+				<p:outputLabel value="Comissao: " for="comissao" />
+				<p:inputText id="comissao" value="" />
+				<p:outputLabel value="Percentual negociar:" for="percentual" />
+				<p:inputText id="percentual" value="" />
+				<h:outputLabel value="Preço: " for="preco" />
+				<p:inputText id="preco" value="Preço" label="Preço:" />
+				<h:outputLabel value="Valor Dolar:" for="vlrDolar" />
+				<p:inputText id="vlrDolar" value="" />
+
+			</h:panelGrid>
+			<h:panelGrid columns="2">
+				<p:panel header="Poloniex">
+					<h:panelGrid columns="2">
+						<p:outputLabel value="Key: " for="keyPoloniex" />
+						<p:inputText id="keyPoloniex" value="" />
+						<p:outputLabel value="Secret: " for="secretPoloniex" />
+						<p:inputText id="secretPoloniex" value="" />
+					</h:panelGrid>
+
+				</p:panel>
+				<p:panel header="Bittrex">
+					<h:panelGrid columns="2">
+						<p:outputLabel value="Key: " for="keyBittrex" />
+						<p:inputText id="keyBittrex" value="" />
+						<p:outputLabel value="Secret: " for="secretBittrex" />
+						<p:inputText id="secretBittrex" value="" />
+					</h:panelGrid>
+
+				</p:panel>
+				<p:panel header="Mercado">
+					<h:panelGrid columns="2">
+						<p:outputLabel value="Key: " for="keyMercado" />
+						<p:inputText id="keyMercado" value="" />
+						<p:outputLabel value="Secret: " for="secretMercado" />
+						<p:inputText id="secretMercado" value="" />
+					</h:panelGrid>
+
+				</p:panel>
+
+				<p:panel header="Binance">
+				<h:panelGrid columns="2">
+					<p:outputLabel value="Key: " for="keyBinance" />
+					<p:inputText id="keyBinance" value="" />
+					<p:outputLabel value="Secret: " for="secretBinance" />
+					<p:inputText id="secretBinance" value="" />
+				</h:panelGrid>
+				</p:panel>
+			</h:panelGrid>
+			<p:commandButton label="Iniciar"  value="Iniciar" ></p:commandButton>
+		</p:panel>
+	</h:form>
+</h:body>
+</html>
