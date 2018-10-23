@@ -10,19 +10,27 @@
 	<h:form>
 		<p:panel header="Robo Para Trade Em Exchange">
 			<p:messages id="mensagem" />
-			<h:panelGrid columns="4">
-				<p:outputLabel value="Comissao: " for="comissao" />
-				<p:inputText id="comissao" value="" />
-				<p:outputLabel value="Percentual negociar:" for="percentual" />
-				<p:inputText id="percentual" value="" />
-				<h:outputLabel value="Preço: " for="preco" />
-				<p:inputText id="preco" value="Preço" label="Preço:" />
-				<h:outputLabel value="Valor Dolar:" for="vlrDolar" />
-				<p:inputText id="vlrDolar" value="" />
+			<h:panelGrid columns="2">
+				<p:panel header="Percentuais" id="pnlPercentuais">
+					<h:panelGrid columns="2">
+						<p:outputLabel value="Comissao: " for="comissao" />
+						<p:inputText id="comissao" value="" />
+						<p:outputLabel value="Percentual negociar:" for="percentual" />
+						<p:inputText id="percentual" value="" />
+					</h:panelGrid>
+				</p:panel>
+				<p:panel header="Valores Monetarios"  id="vlrMonetario" style="width: 372px;">
+					<h:panelGrid columns="2">
+						<h:outputLabel value="Preço: " for="preco" />
+						<p:inputText id="preco" value="Preço" label="Preço:" />
+						<h:outputLabel value="Valor Dolar:" for="vlrDolar" />
+						<p:inputText id="vlrDolar" value="" />
+					</h:panelGrid>
+				</p:panel>
 
 			</h:panelGrid>
 			<h:panelGrid columns="2">
-				<p:panel header="Poloniex">
+				<p:panel header="Poloniex"  style="width: 372px;">
 					<h:panelGrid columns="2">
 						<p:outputLabel value="Key: " for="keyPoloniex" />
 						<p:inputText id="keyPoloniex" value="" />
@@ -31,7 +39,7 @@
 					</h:panelGrid>
 
 				</p:panel>
-				<p:panel header="Bittrex">
+				<p:panel header="Bittrex"  style="width: 372px;">
 					<h:panelGrid columns="2">
 						<p:outputLabel value="Key: " for="keyBittrex" />
 						<p:inputText id="keyBittrex" value="" />
@@ -40,7 +48,7 @@
 					</h:panelGrid>
 
 				</p:panel>
-				<p:panel header="Mercado">
+				<p:panel header="Mercado" style="width: 372px;">
 					<h:panelGrid columns="2">
 						<p:outputLabel value="Key: " for="keyMercado" />
 						<p:inputText id="keyMercado" value="" />
@@ -50,16 +58,16 @@
 
 				</p:panel>
 
-				<p:panel header="Binance">
-				<h:panelGrid columns="2">
-					<p:outputLabel value="Key: " for="keyBinance" />
-					<p:inputText id="keyBinance" value="" />
-					<p:outputLabel value="Secret: " for="secretBinance" />
-					<p:inputText id="secretBinance" value="" />
-				</h:panelGrid>
+				<p:panel header="Binance" style="width: 372px;">
+					<h:panelGrid columns="2">
+						<p:outputLabel value="Key: " for="keyBinance" />
+						<p:inputText id="keyBinance" value="" />
+						<p:outputLabel value="Secret: " for="secretBinance" />
+						<p:inputText id="secretBinance" value="" />
+					</h:panelGrid>
 				</p:panel>
 			</h:panelGrid>
-			<p:commandButton label="Iniciar"  value="Iniciar" ></p:commandButton>
+			<p:commandButton label="Iniciar" value="Iniciar"></p:commandButton>
 		</p:panel>
 	</h:form>
 </h:body>

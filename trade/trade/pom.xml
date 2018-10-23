@@ -2,10 +2,16 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>br.com.w2dev</groupId>
+	 <groupId>org.knowm.xchange</groupId>
 	<artifactId>trade</artifactId>
-	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging> 
+	<version>4.3.11</version>
+	<!-- <parent>
+		<groupId>org.knowm.xchange</groupId>
+		<artifactId>xchange-parent</artifactId>
+		<version>4.3.11</version>
+	</parent> -->
+	
 
 	<repositories>
 		<repository>
@@ -14,6 +20,18 @@
 			<url>http://repository.primefaces.org</url>
 		</repository>
 	</repositories>
+
+
+	<name>XChange Examples</name>
+	<description>Provides a set of examples that demonstrate how to use XChange in client applications</description>
+
+	<url>http://knowm.org/open-source/xchange/</url>
+	<inceptionYear>2012</inceptionYear>
+
+	<organization>
+		<name>Knowm Inc.</name>
+		<url>http://knowm.org/open-source/xchange/</url>
+	</organization>
 
 	<dependencies>
 
@@ -44,6 +62,58 @@
 			<version>6.2</version>
 		</dependency>
 
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+	<!-- 	<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.knowm.xchart</groupId>
+			<artifactId>xchart</artifactId>
+		</dependency> --> 
+		<!-- <dependency> <groupId>org.reflections</groupId> <artifactId>reflections</artifactId> 
+			</dependency> -->
+
+		<!-- XChange dependencies -->
+		<!-- XChange Mercado Bitcoin exchange support -->
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>xchange-mercadobitcoin</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<!-- XChange Poloniex exchange support -->
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>xchange-poloniex</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.thecookielab</groupId>
+			<artifactId>PoloniexClient</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
+		<!-- XChange Bittrex exchange support -->
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>xchange-bittrex</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<!-- XChange Binance exchange support -->
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>xchange-binance</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<plugins>
@@ -55,6 +125,35 @@
 					<!-- http://maven.apache.org/plugins/maven-compiler-plugin/ -->
 					<source>1.8</source>
 					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.m2e</groupId>
+				<artifactId>lifecycle-mapping</artifactId>
+				<version>1.0.0</version>
+				<configuration>
+					<lifecycleMappingMetadata>
+						<pluginExecutions>
+							<pluginExecution>
+								<pluginExecutionFilter>
+									<groupId>com.coveo</groupId>
+									<artifactId>
+										fmt-maven-plugin
+									</artifactId>
+									<versionRange>
+										[2.5.0,)
+									</versionRange>
+									<goals>
+										<goal>format</goal>
+									</goals>
+								</pluginExecutionFilter>
+								<action>
+									<ignore></ignore>
+								</action>
+							</pluginExecution>
+						</pluginExecutions>
+					</lifecycleMappingMetadata>
 				</configuration>
 			</plugin>
 		</plugins>
